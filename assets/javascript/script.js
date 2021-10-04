@@ -40,3 +40,10 @@ console.log("success")
 // $.ajax(settings).done(function (response) {
 // 	console.log(response);
 // });
+
+// KEEP AT BOTTOM OF JAVAFILE
+
+// Initialization of Materialize input field in Sidebar Search
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
