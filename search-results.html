@@ -25,22 +25,20 @@
 
       <main class ="container">
       <div class="row">
-        <sidebar class="col s12 m4">
+        <sidebar class="col s12 m3">
           <p>This is where out music player integration goes</p>
           <div class="row">
-            <div class="card blue-grey darken-1">
-              <div class="card-content white-text">
                   <form class="col s12">
                     <div class="row">
                       <div class="input-field col s12">
-                        <input placeholder="iPhone" id="product" type="text" class="">
+                        <input placeholder="iPhone" id="product" type="text" class="validate">
                         <label for="product">Search by Product</label>
                       </div>
                     </div>
                     <div class="row">
                       <div class="input-field col s12 white-text">
                         <select>
-                          <option value="" selected>All</option>
+                          <option id="category" value="" selected>All</option>
                           <option value="1">Electronics</option>
                           <option value="2">Outdoors</option>
                           <option value="3">Food & Grocery</option>
@@ -52,22 +50,21 @@
                     </div>  
                     <div class="row">
                       <div class="input-field col s12">
-                        <input disabled value="US" id="country" type="text" class="">
+                        <input disabled value="US" id="country" type="text" class="validate">
                         <label for="country">Search by Country</label>
                       </div>
                     </div>
+                    <div class="card-action" id="filer-search-card">
+                      <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <i class="material-icons right">send</i>
+                      </button>
+                    </div>
                   </form>
-                <div class="card-action" id="filer-search-card">
-                  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-                    <i class="material-icons right">send</i>
-                  </button>
-                </div>
-              </div>
-            </div>
+                 
           </div>
         </sidebar>
         <content>
-          <div class="col s12 m8">
+          <div id="results-display" class="col s12 m9">
           <h1 class="center-align">ALL CONTENT OVER HERE</h1>
           </div>
         </content>

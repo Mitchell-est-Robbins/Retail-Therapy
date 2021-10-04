@@ -1,8 +1,40 @@
-console.log("success")
+var productSearch = document.getElementById('product');
+var categorySearch = document.getElementById('category');
+var resultsLayout = document.getElementById('results-display')
+console.log(productSearch);
+console.log(productSearch.value);
+console.log(categorySearch);
+console.log(categorySearch.value);
+var resultQuantity = 6
+var resultsIndex = 0
+function createContainers() {
+    var resultsGrid = document.createElement('div');
+      // Create a holding grid 
+      var rowGrid = document.createElement('div');
+      console.log(rowGrid)
+      // Set up a div to display in row
+      rowGrid.classList.add('row');
+      console.log(rowGrid)
 
-
-
-
+    for (var i = 0; i < resultQuantity; i++) {
+    // Set up three columns with class s12 and m3
+    var resultBlock = document.createElement('div');
+    console.log(resultBlock);
+    resultBlock.classList.add('col', 's12', 'm4');
+    console.log(resultBlock);
+    resultBlock.textContent = "Hello I'm Block [i]"
+    console.log(resultBlock);
+    rowGrid.append(resultBlock)
+    console.log(rowGrid);
+    resultsGrid.append(rowGrid)
+    console.log(resultsGrid);
+}
+resultsLayout.append(resultsGrid);
+}
+createContainers()
+    
+    
+    // Repeat the top function again
 
 
 //=============================================
@@ -47,3 +79,6 @@ console.log("success")
   $(document).ready(function(){
     $('select').formSelect();
   });
+
+  M.AutoInit();
+        
