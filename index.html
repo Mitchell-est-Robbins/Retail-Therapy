@@ -12,38 +12,71 @@
     }
 
     body {
-      background: url('https://images.squarespace-cdn.com/content/v1/5eb8c99429c7c928b1fa6dc5/1593539896964-C0A7RBVS9Z2TGA5ZGPO3/iStock-1210770881_2500.jpg?format=2500w') no-repeat center center fixed;
+      background: url('https://images.unsplash.com/photo-1525176856018-d7fce7007c89?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80') no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
     }
 
+
+    #retailTherapy {
+      text-align: center;
+      font-family: 'Fugaz One', cursive;
+      color: #f8bc87;
+    }
+    .dot {
+      font-size: 1em;
+      color: #03435a;
+    }
+
+    #shopWith {
+      font-size: 30px;
+      color: #e7af8f;
+      margin-left: -9em;
+      border-bottom: solid;
+    }
+
     #content {
-      padding: 25% 20%;
+      padding: .01% 20%;
       display: inline-flex;
 
     }
 
     #searchBtn {
-      background-color: #248EA6;
-      height: 3.25em;
+      background-color: #314E59;
+      height: 3.4em;
+      width: 3em;
+    }
+
+    #header  {
+      padding-top: 10rem;
+      
     }
   </style>
   <title>
     Retail Therapy
   </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Roboto+Condensed&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 
 <body>
-
+    <div id="header">
+      <h1 id="retailTherapy">
+        <span id="shopWith">shop with</span>
+        <br>
+        Retail Therapy<span class="dot">.</span>
+      </h1>
+    </div>
   <div class="container">
     <div id="content">
-      <input type='text' id='search' class="form-control search-form" placeholder="Search products from Amazon" style="width: 45em; border-radius: 2px 2px; background-color: white ;
-          border: solid 2px #025E73;">
+      <input type='text' id='search' placeholder="Search products from Amazon" style="width: 41em; border-radius: 2px 2px; background-color: white ;
+          border: solid 2px #314E59; height: 3em;">
       <button id="searchBtn" type="button">
         <i class="material-icons" style="color: white;">search</i>
       </button>
