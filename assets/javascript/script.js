@@ -29,7 +29,7 @@ console.log("success")
 // const settings = {
 // 	"async": true,
 // 	"crossDomain": true,
-// 	"url": "https://amazon-product-reviews-keywords.p.rapidapi.com/product/reviews?asin=B07XQXZXJC&country=US&variants=1&top=0",
+// 	"url": "https://amazon-product-reviews-keywords.p.rapidapi.com/product/search?keyword=iphone&country=US&category=aps",
 // 	"method": "GET",
 // 	"headers": {
 // 		"x-rapidapi-host": "amazon-product-reviews-keywords.p.rapidapi.com",
