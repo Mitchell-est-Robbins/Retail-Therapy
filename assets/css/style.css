@@ -32,6 +32,16 @@ body{
         color: #1f0d02;
         border: var(--darkest-brown) solid 2px;
         border-radius: 5px 5px ;
+    
+}
+
+#results-display {
+    width: 60em;
+    align-items: center;
+    display: inline-flex;
+    align-items: flex-end;
+    margin-left: 9em;
+    margin-top: -25em;
 }
 
 #form {
@@ -39,10 +49,14 @@ body{
     color: aliceblue;
     border-radius: 5px 5px;
     border: var(--darkest-brown) solid 2px;
+    width: 17em;
+    margin-left: -15em;
+    
 }
 
 #sidebar {
     color: white;
+    margin-left:5em ;
 }
 
  
