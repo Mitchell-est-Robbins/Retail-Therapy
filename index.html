@@ -2,109 +2,104 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    html,
-    body {
-      height: 100%;
-    }
-
-    body {
-      background: url('https://images.unsplash.com/photo-1525176856018-d7fce7007c89?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80') no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-    }
-
-
-    #retailTherapy {
-      text-align: center;
-      font-family: 'Fugaz One', cursive;
-      color: #f8bc87;
-    }
-
-    .dot {
-      font-size: 1em;
-      color: #03435a;
-    }
-
-    #shopWith {
-      font-size: 30px;
-      color: #ecdfd7;
-      margin-left: -9em;
-      border-bottom: solid;
-    }
-
-    #content {
-      padding: .01% 23%;
-      display: inline-flex;
-
-    }
-
-    #searchBtn {
-      background-color: #314E59;
-      height: 3.4em;
-      width: 3em;
-    }
-
-    #header {
-      padding-top: 10rem;
-    }
-
-    #footer {
-      color: #f8bc87;
-      text-align: center;
-      bottom: 2px;
-      height: 40px;
-      margin-top: 40px;
-      text-align: center;
-      vertical-align: middle;
-      position: fixed;
-      width: 100%;
-
-    }
-
-    /* #email {
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+        
+        body {
+            background: url('https://images.unsplash.com/photo-1525176856018-d7fce7007c89?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        
+        #retailTherapy {
+            text-align: center;
+            font-family: 'Fugaz One', cursive;
+            color: #f8bc87;
+        }
+        
+        .dot {
+            font-size: 1em;
+            color: #03435a;
+        }
+        
+        #shopWith {
+            font-size: 30px;
+            color: #ecdfd7;
+            margin-left: -9em;
+            border-bottom: solid;
+        }
+        
+        #content {
+            padding: .01% 23%;
+            display: inline-flex;
+        }
+        
+        #searchBtn {
+            background-color: #314E59;
+            height: 3.4em;
+            width: 3em;
+        }
+        
+        #header {
+            padding-top: 10rem;
+        }
+        
+        #footer {
+            color: #f8bc87;
+            text-align: center;
+            bottom: 2px;
+            height: 40px;
+            margin-top: 40px;
+            text-align: center;
+            vertical-align: middle;
+            position: fixed;
+            width: 100%;
+        }
+        /* #email {
       text-decoration: none;
     } */
-  </style>
-  <title>
-    Retail Therapy
-  </title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Roboto+Condensed&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    </style>
+    <title>
+        Retail Therapy
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 
 <body>
-  <div id="header">
-    <h1 id="retailTherapy">
-      <span id="shopWith">shop with</span>
-      <br>
-      Retail Therapy<span class="dot">.</span>
-    </h1>
-  </div>
-  <div class="container">
-    <div id="content">
-      <input type='text' id='search' placeholder="Search products from Amazon" style="width: 41em; border-radius: 2px 2px; background-color: white ;
-          border: solid 2px #314E59; height: 3em;">
-      <button id="searchBtn" type="button">
-        <i class="material-icons" style="color: white;">search</i>
-      </button>
+    <div id="header">
+        <h1 id="retailTherapy">
+            <span id="shopWith">shop with</span>
+            <br> Retail Therapy<span class="dot">.</span>
+        </h1>
     </div>
-  </div>
-  <footer id="footer">
-    &copy; The Appenders Productions
-    <!-- <a id="email" href="mailto:the.appenders@gmail.com" >the.appenders@gmail.com</a> -->
-  </footer>
+    <div class="container">
+        <div id="content">
+            <input type='text' id='search' placeholder="Search products from Amazon" style="width: 41em; border-radius: 2px 2px; background-color: white ;
+          border: solid 2px #314E59; height: 3em;">
+            <button id="searchBtn" type="button">
+            <i class="material-icons" style="color: white;">search</i>
+            </button>
+        </div>
+    </div>
+    <footer id="footer">
+        &copy; The Appenders Productions
+        <!-- <a id="email" href="mailto:the.appenders@gmail.com" >the.appenders@gmail.com</a> -->
+    </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
 </html>
