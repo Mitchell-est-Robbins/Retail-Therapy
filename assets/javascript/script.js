@@ -28,7 +28,7 @@ function createContainers() {
     console.log(resultBlock);
     // resultBlock.classList.add('col', 's12', 'm4',);
     resultBlock.className ='card large';
-    resultBlock.classList.add('col', 's12', 'm4',);
+    resultBlock.classList.add('col', 's12', 'm4', 'card-background');
     // console.log(resultBlock);
     // resultBlock.textContent = "Hello I'm Block" + i
     resultBlock.id= "block" + i;
