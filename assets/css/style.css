@@ -18,8 +18,6 @@
 .brand-logo {
     font-family: 'Fugaz One', cursive;
 
-    background-color: #012E40;
-
 }
 
 
@@ -36,7 +34,7 @@ body {
 .card-background {
     background-color: var(--lightestBrown);
     color: #1f0d02;
-    border: var(--darkest-brown) solid 2px;
+    border: #47250f solid 2px;
     border-radius: 5px 5px;
 
 }
@@ -46,16 +44,18 @@ body {
     align-items: center;
     display: inline-flex;
     align-items: flex-end;
-    margin-left: 9em;
-    margin-top: -25em;
+    margin-left: 15em;
+    margin-top: -35em;
 }
 
 #form {
+    margin-top: 5rem;
     background-color: var(--lighterBlue);
     color: aliceblue;
     border-radius: 5px 5px;
-    border: var(--darkest-brown) solid 2px;
+    border: #47250f solid 2px;
     width: 17em;
+    height: 24em;
     margin-left: -15em;
 
 }
@@ -68,6 +68,31 @@ body {
 
 }
 
+.card-image{
+    margin-top: 30px;
+    border: solid 3px #47250f ;
+}
+
+#motivator {
+    margin-left: -15.5em;
+    height: 3em;
+    width: 17rem;
+    border: #47250f solid 2px;
+    background-color: var(--lightestBrown);
+    color: #f7cdb2;
+    font-family: 'Fugaz One', cursive;
+}
+
+#mototext {
+    margin-left: -15.5em ;
+    background-color: var(--lighterBlue);
+    width: 17em;
+    margin-top: 5px;
+    color: #f7cdb2 ;
+    font-size: 1em;
+    padding: 5px;
+    border: #47250f solid 2px;
+}
 
 
 

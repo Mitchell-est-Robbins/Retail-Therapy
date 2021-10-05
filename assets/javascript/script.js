@@ -108,7 +108,7 @@ function createCards(searchProducts) {
     var trimmedString = string.substring(0, length);
     productTitle.textContent = trimmedString;
     cardContentDiv.append(productTitle);
-    productTitle.setAttribute('style', 'font-size:18px, font-weight: bold, font-style: inherit')
+    productTitle.setAttribute('style', 'font-size: 18px, font-weight: bold, font-style: inherit')
     console.log(productTitle);
     // create current Price and append to content
     var currentPrice = document.createElement('p')
