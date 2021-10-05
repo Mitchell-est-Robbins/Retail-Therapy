@@ -2,7 +2,7 @@
 :root {
     --darkestBlue: #011C26;
     --lighterBlue: #314E59;
-    --lightestBrown: #D99962;
+    --lightestBrown: #d99962;
     --mediumBrown: #BF7B54;
     --darkest-brown: #8C5B3E;
 }
@@ -10,10 +10,61 @@
 
 
 .nav-wrapper{
-    background-color: #012E40;
+
+    background-color: var(--darkestBlue);
+    position: fixed;
 }
+.brand-logo {
+    font-family: 'Fugaz One', cursive;
+
+    background-color: #012E40;
+
+}
+
+
+
 body{
+
+   background: url('https://images.unsplash.com/photo-1525176856018-d7fce7007c89?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80') no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+}
+
+    .card-background {
+        background-color: var(--lightestBrown);
+        color: #1f0d02;
+        border: var(--darkest-brown) solid 2px;
+        border-radius: 5px 5px ;
+    
+}
+
+#results-display {
+    width: 60em;
+    align-items: center;
+    display: inline-flex;
+    align-items: flex-end;
+    margin-left: 9em;
+    margin-top: -25em;
+}
+
+#form {
+    background-color: var(--lighterBlue);
+    color: aliceblue;
+    border-radius: 5px 5px;
+    border: var(--darkest-brown) solid 2px;
+    width: 17em;
+    margin-left: -15em;
+    
+}
+
+#sidebar {
+    color: white;
+    margin-left:5em ;
+
     background-color: #248EA6;
+
 }
 
 
