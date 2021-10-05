@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Therapeutic Shop</title>
+  <title>Search Results</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Roboto+Condensed&display=swap" rel="stylesheet">
@@ -19,10 +19,10 @@
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo">Retail Therapy.</a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#search-card"><i class="material-icons left">search</i>Begin your search</a></li>
-          <li><a href="#filter-search-card"><i class="material-icons left">view_module</i>Perform Advanced Search</a>
+          <li class="navbarList"><a href="#search-card"><i class="material-icons left">search</i>Begin your search</a></li>
+          <li class="navbarList"><a href="#filter-search-card"><i class="material-icons left">view_module</i>Perform Advanced Search</a>
           </li>
-          <li><a href="#appendersContact"><i class="material-icons left">view_module</i>Contact Us</a></li>
+          <li class="navbarList"><a href="#appendersContact"><i class="material-icons left">view_module</i>Contact Us</a></li>
         </ul>
       </div>
     </nav>
@@ -55,13 +55,13 @@
                   <option value="4">Sports</option>
                   <option value="5">Beauty & Health</option>
                 </select>
-                <label>Search by Category</label>
+                <label id="sbc">Search by Category</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
                 <input disabled value="US" id="country" type="text" class="validate">
-                <label for="country">Search by Country</label>
+                <label id="sbCountry" for="country">Search by Country</label>
               </div>
             </div>
             <div class="card-action center-align" id="filer-search-card">
@@ -72,7 +72,7 @@
           </form>
 
         </div>
-        <button id="motivator">Motivate Me !</button>
+        <button id="motivator">Motivate Me!</button>
         <p id="mototext">x</p>
       </sidebar>
       <content>

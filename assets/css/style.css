@@ -15,9 +15,12 @@
     position: fixed;
 }
 
+.navbarList {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
 .brand-logo {
     font-family: 'Fugaz One', cursive;
-
 }
 
 
@@ -50,15 +53,26 @@ body {
 
 #form {
     margin-top: 5rem;
+    padding-top: 3px;
     background-color: var(--lighterBlue);
-    color: aliceblue;
+    color: white;
     border-radius: 5px 5px;
     border: #47250f solid 2px;
-    width: 17em;
+    width: 20em;
     height: 24em;
     margin-left: -15em;
-
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1em;
 }
+
+#sbc {
+    color: white;
+}
+
+#sbCountry {
+    color: rgba(255, 255, 255, 0.637);
+}
+
 
 #sidebar {
     color: white;
@@ -76,7 +90,7 @@ body {
 #motivator {
     margin-left: -15.5em;
     height: 3em;
-    width: 17rem;
+    width: 20rem;
     border: #47250f solid 2px;
     background-color: var(--lightestBrown);
     color: #f7cdb2;
@@ -86,12 +100,14 @@ body {
 #mototext {
     margin-left: -15.5em ;
     background-color: var(--lighterBlue);
-    width: 17em;
+    width: 20em;
     margin-top: 5px;
     color: #f7cdb2 ;
     font-size: 1em;
     padding: 5px;
     border: #47250f solid 2px;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
 }
 
 
