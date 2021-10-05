@@ -10,13 +10,13 @@
 
 
 .nav-wrapper{
-    background-color: var(--darkest-brown);
+    background-color: #012E40;
 }
 body{
-    background-color: var(--darkestBlue);
+    background-color: #248EA6;
 }
 
- 
+
 
 
 /* spacing and padding with rounded edges on the left */
@@ -49,6 +49,15 @@ body{
   
 
   }
+/* glow on search button */
+  #advanced-search:hover{
+    box-shadow:
+    0 0 10px 5px #e1dcd8,  /* inner white */
+    0 0 30px 10px #7cceee, /* middle magenta */
+    0 0 60px 10px #0d6c8f; /* outer cyan */
+    transition-duration: .5s;
+  }
 
-    
 
+
+ 
