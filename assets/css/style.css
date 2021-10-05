@@ -16,7 +16,12 @@ body{
     background-color: var(--darkestBlue);
 }
 
-    .card-background {
+/* Change card background and design */
+.card-background {
         background-color: var(--darkest-brown);
         color: #fae7d6;
+}
+
+option {
+    color:white
 }

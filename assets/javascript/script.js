@@ -4,45 +4,47 @@ var resultsLayout = document.getElementById('results-display')
 var advancedSearchBtn = document.getElementById('advanced-search');
 var paragraphs = document.getElementsByTagName('p')
 console.log(productSearch);
-productSearch.value = productSearch.textContent
+// productSearch.value = productSearch.textContent
 console.log(productSearch.value);
 console.log(categorySearch);
 console.log(categorySearch.value);
 var resultQuantity = 12
 var resultsIndex = 0
 var resultBlockArray = []
+var productSearchTerm = productSearch.value;
+var categorySearchTerm = categorySearch.value
 
 
-
-function createContainers() {
+function createContainers(event) {
+    event.preventDefault
     var resultsGrid = document.createElement('div');
-      // Create a holding grid 
-      var rowGrid = document.createElement('div');
-      console.log(rowGrid)
-      // Set up a div to display in row
-      rowGrid.classList.add('row');
-      console.log(rowGrid)
-
+    // Create a holding grid 
+    var rowGrid = document.createElement('div');
+    console.log(rowGrid)
+    // Set up a div to display in row
+    rowGrid.classList.add('row');
+    console.log(rowGrid)
+    
     for (var i = 0; i < resultQuantity; i++) {
-    // Set up three columns with class s12 and m3 and unique ID
-    var resultBlock = document.createElement('div');
-    console.log(resultBlock);
-    // resultBlock.classList.add('col', 's12', 'm4',);
-    resultBlock.className ='card large';
-    resultBlock.classList.add('col', 's12', 'm4', 'card-background');
-    // console.log(resultBlock);
-    // resultBlock.textContent = "Hello I'm Block" + i
-    resultBlock.id= "block" + i;
-    // console.log(resultBlock);
-    // Push each finished block into an array
-    resultBlockArray.push(resultBlock);
-    console.log(resultBlockArray);
-    // Attach each result to the row
-    rowGrid.append(resultBlock);
-    // console.log(rowGrid);
-    // Append rows to the grid
-    resultsGrid.append(rowGrid);
-    // console.log(resultsGrid);
+        // Set up three columns with class s12 and m3 and unique ID
+        var resultBlock = document.createElement('div');
+        console.log(resultBlock);
+        // resultBlock.classList.add('col', 's12', 'm4',);
+        resultBlock.className ='card large';
+        resultBlock.classList.add('col', 's12', 'm4', 'card-background');
+        // console.log(resultBlock);
+        // resultBlock.textContent = "Hello I'm Block" + i
+        resultBlock.id= "block" + i;
+        // console.log(resultBlock);
+        // Push each finished block into an array
+        resultBlockArray.push(resultBlock);
+        console.log(resultBlockArray);
+        // Attach each result to the row
+        rowGrid.append(resultBlock);
+        // console.log(rowGrid);
+        // Append rows to the grid
+        resultsGrid.append(rowGrid);
+        // console.log(resultsGrid);
     }
     resultsLayout.append(resultsGrid);
     // Call function to fill each result
@@ -53,12 +55,13 @@ function createContainers() {
 
 function getResultsInfo(){
     // pass productSearch value into the api
-    var productSearch = "tv";
-    var categorySearch = "aps";
-
-    var apiURL = 'https://amazon-product-reviews-keywords.p.rapidapi.com/product/search?keyword=' + productSearch + '&country=US&category=' + categorySearch;    
+    
+    console.log(productSearchTerm)
+    console.log(categorySearchTerm)
+    
+    var apiURL = 'https://amazon-product-reviews-keywords.p.rapidapi.com/product/search?keyword=' + productSearchTerm + '&country=US&category=' + categorySearchTerm;    
     console.log(apiURL)
-
+    
     const settings = {
         "async": true,
         "crossDomain": true,
@@ -184,17 +187,16 @@ $.ajax(settings).done(function (response) {
 
 }); 
 }
-motoTextGeneration()
+// motoTextGeneration()
 
 
-var motivatorBtn= document.getElementById("motivator").addEventListener ("click", function(){
+// var motivatorBtn= document.getElementById("motivator").addEventListener ("click", function(){
   
-  //fun the function to generate the newquote 
-  motoTextGeneration()
-  var motoWords=document.getElementById ("mototext")
-  motoWords.textContent= newQuote 
-
-})
+//   //fun the function to generate the newquote 
+//   motoTextGeneration()
+//   var motoWords=document.getElementById ("mototext")
+//   motoWords.textContent= newQuote 
+// })
 
 // // KEEP AT BOTTOM OF JAVAFILE
 
@@ -207,4 +209,4 @@ var motivatorBtn= document.getElementById("motivator").addEventListener ("click"
   M.AutoInit();
         
 //  Functions with click events at the bottom
-createContainers()
+advancedSearchBtn.addEventListener('click', createContainers)
