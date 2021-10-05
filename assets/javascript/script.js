@@ -11,12 +11,11 @@ console.log(categorySearch.value);
 var resultQuantity = 12
 var resultsIndex = 0
 var resultBlockArray = []
-var productSearchTerm = productSearch.value;
-var categorySearchTerm = categorySearch.value
 
 
 function createContainers(event) {
-    event.preventDefault
+    event.preventDefault();
+    // console.log(event);
     var resultsGrid = document.createElement('div');
     // Create a holding grid 
     var rowGrid = document.createElement('div');
@@ -31,7 +30,7 @@ function createContainers(event) {
         console.log(resultBlock);
         // resultBlock.classList.add('col', 's12', 'm4',);
         resultBlock.className ='card large';
-        resultBlock.classList.add('col', 's12', 'm4', 'card-background');
+        resultBlock.classList.add('col', 's12', 'm6', 'l4', 'card-background');
         // console.log(resultBlock);
         // resultBlock.textContent = "Hello I'm Block" + i
         resultBlock.id= "block" + i;
@@ -56,6 +55,8 @@ function createContainers(event) {
 function getResultsInfo(){
     // pass productSearch value into the api
     
+    var productSearchTerm = productSearch.value
+    var categorySearchTerm = categorySearch.value
     console.log(productSearchTerm)
     console.log(categorySearchTerm)
     
@@ -96,6 +97,7 @@ function createCards(searchProducts) {
     // create image element and append to imageDiv
     var productImage = document.createElement('img');
     productImage.setAttribute('src', searchProducts[i].thumbnail);
+    // productImage.setAttribute('style', 'max-height:300px')
     // productImage.setAttribute('style', 'width: 20vw')
     imageDiv.append(productImage);
     console.log(productImage);
@@ -202,11 +204,12 @@ $.ajax(settings).done(function (response) {
 
 
 // Initialization of Materialize input field in Sidebar Search
-  $(document).ready(function(){
-    $('select').formSelect();
-  });
+//   $(document).ready(function(){
+//     $('select').formSelect();
+//   });
 
   M.AutoInit();
         
 //  Functions with click events at the bottom
 advancedSearchBtn.addEventListener('click', createContainers)
+// createContainers(
