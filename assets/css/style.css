@@ -45,3 +45,39 @@ body{
     color: white;
 }
 
+ 
+
+
+/* spacing and padding with rounded edges on the left */
+#appendersContact {
+    text-align: right;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 25px ;
+    border-radius: 25px;
+
+    margin:0px auto;
+    width: 10%;
+    height:40px;
+    background-color:#0f283c;
+    float:right;
+    padding:10px;
+    border:2px solid #314E59;
+
+    
+  }
+/* Fox- adding hover effets to links */
+  /* this is hover glow on contact button */
+
+  .appendersContactClass:hover{
+       /* shadow glow*/
+    box-shadow:
+    0 0 60px 30px #e1dcd8,  /* inner white */
+    0 0 100px 60px #7cceee, /* middle magenta */
+    0 0 140px 90px #0d6c8f; /* outer cyan */
+    transition-duration: .5s;
+  
+
+  }
+
+    
+
