@@ -2,7 +2,7 @@
 :root {
     --darkestBlue: #011C26;
     --lighterBlue: #314E59;
-    --lightestBrown: #D99962;
+    --lightestBrown: #d99962;
     --mediumBrown: #BF7B54;
     --darkest-brown: #8C5B3E;
 }
@@ -10,10 +10,10 @@
 
 
 .nav-wrapper{
-    background-color: var(--darkestBlue);
+    background-color: var(--darkest-brown);
 }
 body{
-    background-color: var(--lighterBlue);
+    background-color: var(--darkestBlue);
 }
 
 
