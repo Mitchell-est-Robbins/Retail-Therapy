@@ -13,6 +13,7 @@ var resultsIndex = 0
 var resultBlockArray = []
 
 
+
 function createContainers() {
     var resultsGrid = document.createElement('div');
       // Create a holding grid 
@@ -149,6 +150,51 @@ function createCards(searchProducts) {
     }
 }
 
+
+
+// ========================API  #2 motivational quotes
+
+var newQuote= ""
+
+
+function motoTextGeneration (){
+const settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://motivational-quotes1.p.rapidapi.com/motivation",
+	"method": "POST",
+	"headers": {
+		"content-type": "application/json",
+		"x-rapidapi-host": "motivational-quotes1.p.rapidapi.com",
+		"x-rapidapi-key": "0043ca6f4dmshdf70dfcdb9f6d49p1d4043jsn7d470c8cf85a"
+	},
+	"processData": false,
+	"data": {
+		"key1": "value",
+		"key2": "value"
+	}
+};
+
+$.ajax(settings).done(function (response) {
+	// console.log(response);
+  //clears quote box and add response
+  newQuote= ""
+  newQuote= response
+  // console.log (newQuote);
+
+}); 
+}
+motoTextGeneration()
+
+
+var motivatorBtn= document.getElementById("motivator").addEventListener ("click", function(){
+  
+  //fun the function to generate the newquote 
+  motoTextGeneration()
+  var motoWords=document.getElementById ("mototext")
+  motoWords.textContent= newQuote 
+
+})
 
 // // KEEP AT BOTTOM OF JAVAFILE
 
