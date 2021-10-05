@@ -26,7 +26,8 @@ function createContainers() {
     var resultBlock = document.createElement('div');
     console.log(resultBlock);
     // resultBlock.classList.add('col', 's12', 'm4',);
-    resultBlock.className ='card small';
+    resultBlock.className ='card large';
+    resultBlock.classList.add('col', 's12', 'm4',);
     // console.log(resultBlock);
     // resultBlock.textContent = "Hello I'm Block" + i
     resultBlock.id= "block" + i;
@@ -90,6 +91,7 @@ function createCards(searchProducts) {
     // create image element and append to imageDiv
     var productImage = document.createElement('img');
     productImage.setAttribute('src', searchProducts[i].thumbnail);
+    // productImage.setAttribute('style', 'width: 20vw')
     imageDiv.append(productImage);
     console.log(productImage);
     
@@ -120,7 +122,7 @@ function createCards(searchProducts) {
     // create total review count and append to card content
     var reviewCount = document.createElement('p')
     reviewCount.classList.add('description')
-    reviewCount.textContent = "Total Reviws: " + searchProducts[i].reviews.total_reviews
+    reviewCount.textContent = "Total Reviews: " + searchProducts[i].reviews.total_reviews
     cardContentDiv.append(reviewCount)
     console.log(reviewCount)
     // append card content to card
