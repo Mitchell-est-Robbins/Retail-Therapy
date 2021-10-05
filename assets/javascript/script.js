@@ -1,7 +1,8 @@
 var productSearch = document.getElementById('product');
 var categorySearch = document.getElementById('category');
 var resultsLayout = document.getElementById('results-display')
-var advancedSearchBtn = document.getElementById('advanced-search')
+var advancedSearchBtn = document.getElementById('advanced-search');
+var paragraphs = document.getElementsByTagName('p')
 console.log(productSearch);
 productSearch.value = productSearch.textContent
 console.log(productSearch.value);
@@ -101,33 +102,47 @@ function createCards(searchProducts) {
     // create product Title and append content
     var productTitle = document.createElement('span');
     productTitle.classList.add('center-align', 'card-title');
-    productTitle.textContent = searchProducts[i].title;
+    var string = searchProducts[i].title;
+    var length = 50;
+    var trimmedString = string.substring(0, length);
+    productTitle.textContent = trimmedString;
     cardContentDiv.append(productTitle);
+    productTitle.setAttribute('style', 'font-size:18px, font-weight: bold, font-style: inherit')
     console.log(productTitle);
     // create current Price and append to content
     var currentPrice = document.createElement('p')
     currentPrice.classList.add('description')
     currentPrice.textContent = "Sale Price: " + searchProducts[i].price.current_price
+    currentPrice.setAttribute('style', 'font-size: 14px, font-style: inherit')
     cardContentDiv.append(currentPrice);
     console.log(currentPrice)
+    // Create view on Amazon hyperlink
+    var productLink = document.createElement('a')
+    var uniqueLink = searchProducts[i].url
+    console.log(uniqueLink)
+    productLink.setAttribute('style', 'font-size: 14px, font-style: inherit')
+    productLink.setAttribute('href', uniqueLink)
+    productLink.textContent = 'View this product on Amazon'
+    cardContentDiv.append(productLink)
     // create review stars track and append to card content
     var reviewStars = document.createElement('p')
     reviewStars.classList.add('description')
     reviewStars.textContent = "Amazon Product Rating: " + searchProducts[i].reviews.rating
+    reviewStars.setAttribute('style', 'font-size: 14px, font-style: inherit')
     cardContentDiv.append(reviewStars)
     console.log(reviewStars)
-    // create br element
-    // var pageSpace = document.createElement('br')
-    // cardContentDiv.append(pageSpace)
     // create total review count and append to card content
     var reviewCount = document.createElement('p')
     reviewCount.classList.add('description')
     reviewCount.textContent = "Total Reviews: " + searchProducts[i].reviews.total_reviews
+    reviewCount.setAttribute('style', 'font-size: 14px, font-style: inherit')
     cardContentDiv.append(reviewCount)
     console.log(reviewCount)
-    // append card content to card
+    // Style paragraphs and card title
+    // paragraphs.setAttribute('style', 'font-size: 14px, font-style: inherit')
     // append image div to card div
     result.append(imageDiv)
+    // append card content to card
     result.append(cardContentDiv)
     // append card to results
     // result.append(cardDiv);
