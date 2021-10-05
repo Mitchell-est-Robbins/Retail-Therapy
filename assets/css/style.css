@@ -10,9 +10,10 @@
 
 
 .nav-wrapper{
-    background-color: #012E40;
+    background-color: var(--darkestBlue);
 }
 body{
-    background-color: #248EA6;
+    background-color: var(--lighterBlue);
 }
+
 
