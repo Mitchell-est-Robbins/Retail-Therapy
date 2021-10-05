@@ -10,13 +10,38 @@
 
 
 .nav-wrapper{
-    background-color: var(--darkest-brown);
-}
-body{
     background-color: var(--darkestBlue);
+    position: fixed;
+}
+.brand-logo {
+    font-family: 'Fugaz One', cursive;
+}
+
+
+
+body{
+   background: url('https://images.unsplash.com/photo-1525176856018-d7fce7007c89?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80') no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
 }
 
     .card-background {
-        background-color: var(--darkest-brown);
-        color: #fae7d6;
+        background-color: var(--lightestBrown);
+        color: #1f0d02;
+        border: var(--darkest-brown) solid 2px;
+        border-radius: 5px 5px ;
 }
+
+#form {
+    background-color: var(--lighterBlue);
+    color: aliceblue;
+    border-radius: 5px 5px;
+    border: var(--darkest-brown) solid 2px;
+}
+
+#sidebar {
+    color: white;
+}
+

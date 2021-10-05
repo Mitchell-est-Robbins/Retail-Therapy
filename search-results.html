@@ -2,6 +2,9 @@
   <html>
     <head>
       <title>Therapeutic Shop</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Roboto+Condensed&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
       <link rel="stylesheet" href="./assets/css/reset.css">
@@ -13,7 +16,7 @@
       <header>
         <nav>
           <div class="nav-wrapper">
-            <a href="#!" class="brand-logo">Retail Therapy</a>
+            <a href="#!" class="brand-logo">Retail Therapy.</a>
             <ul class="right hide-on-med-and-down">
               <li><a href="#search-card"><i class="material-icons left">search</i>Begin your search</a></li>
               <li><a href="#filter-search-card"><i class="material-icons left">view_module</i>Perform Advanced Search</a></li>
@@ -25,10 +28,10 @@
 
       <main class ="container">
       <div class="row">
-        <sidebar class="col s12 m3">
+        <sidebar id="sidebar" class="col s12 m3">
           <p>This is where out music player integration goes</p>
           <div class="row">
-                  <form class="col s12">
+                  <form id="form"class="col s12">
                     <div class="row">
                       <div class="input-field col s12">
                         <input placeholder="iPhone" id="product" type="text" class="validate">
