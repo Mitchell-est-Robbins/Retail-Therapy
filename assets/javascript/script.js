@@ -15,6 +15,7 @@ var resultBlockArray = []
 
 function createContainers(event) {
     event.preventDefault();
+    // resultsGrid.clear();
     // console.log(event);
     var resultsGrid = document.createElement('div');
     // Create a holding grid 
@@ -144,6 +145,7 @@ function createCards(searchProducts) {
     reviewCount.setAttribute('style', 'font-size: 14px, font-style: inherit')
     cardContentDiv.append(reviewCount)
     console.log(reviewCount)
+    $('.description').addClass('center-on-small-only')
     // Style paragraphs and card title
     // paragraphs.setAttribute('style', 'font-size: 14px, font-style: inherit')
     // append image div to card div
@@ -213,3 +215,4 @@ $.ajax(settings).done(function (response) {
 //  Functions with click events at the bottom
 advancedSearchBtn.addEventListener('click', createContainers)
 // createContainers(
+
