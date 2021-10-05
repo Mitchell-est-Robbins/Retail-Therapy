@@ -10,13 +10,13 @@
 
 
 .nav-wrapper{
-    background-color: #012E40;
+    background-color: var(--darkest-brown);
 }
 body{
-    background-color: #248EA6;
+    background-color: var(--darkestBlue);
 }
 
-
+ 
 
 
 /* spacing and padding with rounded edges on the left */
@@ -49,3 +49,6 @@ body{
   
 
   }
+
+    
+
