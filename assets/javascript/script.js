@@ -2,7 +2,9 @@ var productSearch = document.querySelector('#product');
 var categorySearch = document.querySelector('#category');
 var resultsLayout = document.getElementById('results-display')
 var advancedSearchBtn = document.querySelector('#advanced-search');
-var paragraphs = document.getElementsByTagName('p')
+var newQuote = "";
+var motivatorBtn = document.getElementById("motivator")
+var motoWords = document.getElementById("mototext")
 console.log(productSearch);
 // productSearch.value = productSearch.textContent
 console.log(productSearch.value);
@@ -11,14 +13,12 @@ console.log(categorySearch.value);
 var resultQuantity = 12
 var resultsIndex = 0
 var resultBlockArray = []
-var promise = localStorage.getItem('search')
-var firstSearch = JSON.parse(promise)
-console.log(promise);
-console.log(firstSearch);
 function createContainers(event) {
+  if (event) {
     event.preventDefault()
+  }
   resultsLayout.innerHTML=""
-
+  
   var resultsGrid = document.createElement('div');
   // Create a holding grid 
   var rowGrid = document.createElement('div');
@@ -26,7 +26,7 @@ function createContainers(event) {
   // Set up a div to display in row
   rowGrid.classList.add('row');
   console.log(rowGrid)
-
+  
   for (var i = 0; i < resultQuantity; i++) {
     // Set up three columns with class s12 and m3 and unique ID
     var resultBlock = document.createElement('div');
@@ -34,7 +34,7 @@ function createContainers(event) {
     // resultBlock.classList.add('col', 's12', 'm4',);
     resultBlock.className = 'card large';
     resultBlock.classList.add('col', 's12', 'm4', 'l3', 'card-background');
-
+    
     // console.log(resultBlock);
     // resultBlock.textContent = "Hello I'm Block" + i
     resultBlock.id = "block" + i;
@@ -57,13 +57,25 @@ function createContainers(event) {
 }
 
 function getResultsInfo() {
+  var promise = localStorage.getItem('search')
+  var firstSearch = JSON.parse(promise)
+  console.log(promise);
+  console.log(firstSearch);
   // pass productSearch value into the api
-//   var productSearch = ProductSearchTerm;
-//   var categorySearch = CategorySearchTerm;
-  var ProductSearchTerm = productSearch.value
-  var CategorySearchTerm = categorySearch.value   
+  //   var productSearch = ProductSearchTerm;
+  //   var categorySearch = CategorySearchTerm;
+  if (localStorage.length !==0) {
+    ProductSearchTerm = firstSearch;
+    console.log(firstSearch);
+    console.log(ProductSearchTerm)
+    CategorySearchTerm = 'aps'
+  } else {
+    var ProductSearchTerm = productSearch.value
+    console.log(ProductSearchTerm)
+    var CategorySearchTerm = categorySearch.value
+  }
   var apiURL = 'https://amazon-product-reviews-keywords.p.rapidapi.com/product/search?keyword=' + ProductSearchTerm + '&country=US&category=' + CategorySearchTerm;
-
+  
   console.log(apiURL)
   const settings = {
     "async": true,
@@ -156,10 +168,13 @@ function createCards(searchProducts) {
     // append card to results
     // result.append(cardDiv);
   }
+  localStorage.clear();
+  console.log(localStorage)
 }
 
 // ========================API  #2 motivational quotes
 
+var newQuote = ""
 
 function motoTextGeneration() {
   const settings = {
@@ -179,7 +194,6 @@ function motoTextGeneration() {
     }
   };
   
-  var newQuote = ""
 
   $.ajax(settings).done(function (response) {
     // console.log(response);
@@ -187,6 +201,7 @@ function motoTextGeneration() {
     newQuote = ""
     newQuote = response
     console.log (newQuote);
+    motoWords.textContent = newQuote
   });
 }
 
@@ -201,12 +216,15 @@ M.AutoInit();
 
 //  Functions with click events at the bottom
 advancedSearchBtn.addEventListener('click', createContainers)
+motivatorBtn.addEventListener('click',motoTextGeneration)
+// var motivatorBtn = document.getElementById("motivator").addEventListener("click", function () {
+//   //fun the function to generate the newquote 
+//   motoTextGeneration()
+// })
 
-var motivatorBtn = document.getElementById("motivator").addEventListener("click", function () {
-  var motoWords = document.getElementById("mototext")
-  motoWords.textContent = newQuote
-  //fun the function to generate the newquote 
-  motoTextGeneration()
+function init() {
+  if(localStorage.length !==0){
+  createContainers();
 
-})
-
+}}
+init()
