@@ -6,8 +6,8 @@ var promise = localStorage.getItem('search')
 function fullfillSearch(event) {
     promise = homeSearch.value
     console.log(promise)
-    event.preventDefault()
-    localStorage.setItem('search', promise)
+    event.preventDefault();
+    localStorage.setItem('search', JSON.stringify(promise));
     console.log(localStorage)
     window.location.href = 'search-results.html'
 }

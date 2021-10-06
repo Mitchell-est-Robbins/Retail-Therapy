@@ -11,8 +11,10 @@ console.log(categorySearch.value);
 var resultQuantity = 12
 var resultsIndex = 0
 var resultBlockArray = []
-
-
+var promise = localStorage.getItem('search')
+var firstSearch = JSON.parse(promise)
+console.log(promise);
+console.log(firstSearch);
 function createContainers(event) {
     event.preventDefault()
   resultsLayout.innerHTML=""
@@ -178,7 +180,7 @@ function motoTextGeneration() {
   };
   
   var newQuote = ""
-  
+
   $.ajax(settings).done(function (response) {
     // console.log(response);
     //clears quote box and add response
