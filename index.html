@@ -6,7 +6,84 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-   
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      background: url('https://images.unsplash.com/photo-1525176856018-d7fce7007c89?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80') no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+
+    #retailTherapy {
+      text-align: center;
+      font-family: 'Fugaz One', cursive;
+      color: #f8bc87;
+    }
+
+    .dot {
+      font-size: 1em;
+      color: #03435a;
+    }
+
+    #shopWith {
+      font-size: 24px;
+      color: white;
+      margin-left: -7em;
+      border-bottom: solid;
+    }
+
+    #content {
+      padding: .01% 23%;
+      display: inline-flex;
+
+    }
+
+    #searchBtn {
+      background-color: #314E59;
+      height: 3.4em;
+      width: 3em;
+    }
+
+    #header {
+      padding-top: 10rem;
+    }
+
+    #footer {
+      color: #f8bc87;
+      text-align: center;
+      bottom: 2px;
+      height: 40px;
+      margin-top: 40px;
+      text-align: center;
+      vertical-align: middle;
+      position: fixed;
+      width: 100%;
+
+    }
+
+    /* Fox adding glow to search */
+    #search:hover {
+      box-shadow:
+        0 0 10px 5px #e1dcd8,
+        /* inner white */
+        0 0 50px 10px #7cceee,
+        /* middle magenta */
+        0 0 90px 40px #0d6c8f;
+      /* outer cyan */
+      transition-duration: .5s;
+    }
+
+    /* #email {
+      text-decoration: none;
+    } */
+
   </style>
   <title>
     Retail Therapy
@@ -23,7 +100,7 @@
 <body>
   <div id="header">
     <h1 id="retailTherapy">
-      <span id="shopWith">shop with</span>
+      <span id="shopWith">where healing $tarts</span>
       <br>
       Retail Therapy<span class="dot">.</span>
     </h1>
