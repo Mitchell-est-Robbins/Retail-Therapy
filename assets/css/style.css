@@ -11,12 +11,13 @@
 
 .nav-wrapper {
 
-    background-color: var(--darkestBlue);
+    background-color: var(--lightestBrown);
     position: fixed;
 }
 
 .navbarList {
     font-family: 'Roboto Condensed', sans-serif;
+    border: 2px solid #47250f;
 }
 
 .brand-logo {
@@ -27,7 +28,7 @@
 
 body {
 
-    background: url('https://images.unsplash.com/photo-1525176856018-d7fce7007c89?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80') no-repeat center center fixed;
+    background: var(--darkestBlue) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -35,9 +36,10 @@ body {
 }
 
 .card-background {
-    background-color: var(--lightestBrown);
-    color: #1f0d02;
-    border: #47250f solid 2px;
+    background-color: var(--darkest-brown);
+    opacity: 0.85;
+    color: white;
+    border: var(--lightestBrown) solid 3px;
     border-radius: 5px 5px;
 
 }
@@ -48,7 +50,7 @@ body {
     display: inline-flex;
     align-items: flex-end;
     margin-left: 15em;
-    margin-top: -35em;
+    margin-top: -31em;
 }
 
 #form {
