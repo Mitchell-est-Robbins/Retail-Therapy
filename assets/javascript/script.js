@@ -14,6 +14,7 @@ var resultBlockArray = []
 
 function createContainers(event) {
     event.preventDefault()
+  resultsLayout.innerHTML=""
   var resultsGrid = document.createElement('div');
   // Create a holding grid 
   var rowGrid = document.createElement('div');
@@ -28,7 +29,7 @@ function createContainers(event) {
     console.log(resultBlock);
     // resultBlock.classList.add('col', 's12', 'm4',);
     resultBlock.className = 'card large';
-    resultBlock.classList.add('col', 's12', 'm6', 'l4', 'card-background');
+    resultBlock.classList.add('col', 's12', 'm4', 'l3', 'card-background');
     // console.log(resultBlock);
     // resultBlock.textContent = "Hello I'm Block" + i
     resultBlock.id = "block" + i;
@@ -101,45 +102,45 @@ function createCards(searchProducts) {
     var cardContentDiv = document.createElement('div');
     cardContentDiv.classList.add('card-content');
     // create product Title and append content
-    var productTitle = document.createElement('span');
-    productTitle.classList.add('center-align', 'card-title');
+    var productTitle = document.createElement('p');
     var string = searchProducts[i].title;
-    var length = 50;
+    var length = 75;
     var trimmedString = string.substring(0, length);
     productTitle.textContent = trimmedString;
     cardContentDiv.append(productTitle);
-    productTitle.setAttribute('style', 'font-size: 18px, font-weight: bold, font-style: inherit')
+    productTitle.setAttribute('style', 'font-size: 14px, font-style: inherit')
+    productTitle.classList.add('center-align', 'title-of-card');
     console.log(productTitle);
+    // create review stars track and append to card content
+    var reviewStars = document.createElement('p')
+    reviewStars.textContent = "Amazon Product Rating: " + searchProducts[i].reviews.rating
+    reviewStars.setAttribute('style', 'font-size: 14px, font-style: inherit')
+    reviewStars.classList.add('description')
+    cardContentDiv.append(reviewStars)
+    console.log(reviewStars)
     // create current Price and append to content
     var currentPrice = document.createElement('p')
-    currentPrice.classList.add('description')
-    currentPrice.textContent = "Sale Price: " + searchProducts[i].price.current_price
+    currentPrice.textContent = "Sale Price: $" + searchProducts[i].price.current_price
     currentPrice.setAttribute('style', 'font-size: 14px, font-style: inherit')
+    currentPrice.classList.add('description')
     cardContentDiv.append(currentPrice);
     console.log(currentPrice)
     // Create view on Amazon hyperlink
     var productLink = document.createElement('a')
     var uniqueLink = searchProducts[i].url
     console.log(uniqueLink)
-    productLink.setAttribute('style', 'font-size: 14px, font-style: inherit')
     productLink.setAttribute('href', uniqueLink)
+    productLink.setAttribute('style', 'font-size: 14px, font-style: inherit, color: white, text-decoration: underline')
+    productLink.classList.add('description', 'unique-link')
     productLink.textContent = 'View this product on Amazon'
     cardContentDiv.append(productLink)
-    // create review stars track and append to card content
-    var reviewStars = document.createElement('p')
-    reviewStars.classList.add('description')
-    reviewStars.textContent = "Amazon Product Rating: " + searchProducts[i].reviews.rating
-    reviewStars.setAttribute('style', 'font-size: 14px, font-style: inherit')
-    cardContentDiv.append(reviewStars)
-    console.log(reviewStars)
     // create total review count and append to card content
     var reviewCount = document.createElement('p')
-    reviewCount.classList.add('description')
     reviewCount.textContent = "Total Reviews: " + searchProducts[i].reviews.total_reviews
     reviewCount.setAttribute('style', 'font-size: 14px, font-style: inherit')
     cardContentDiv.append(reviewCount)
     console.log(reviewCount)
-    $('.description').addClass('center-on-small-only')
+    reviewCount.classList.add('description')
     // Style paragraphs and card title
     // paragraphs.setAttribute('style', 'font-size: 14px, font-style: inherit')
     // append image div to card div

@@ -146,3 +146,15 @@ body {
     /* outer cyan */
     transition-duration: .5s;
 }
+
+.unique-link {
+    font-size: 14px;
+    font-style: inherit;
+    color: white;
+    text-decoration: underline;
+}
+
+.card {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
