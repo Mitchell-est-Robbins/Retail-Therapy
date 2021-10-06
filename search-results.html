@@ -1,100 +1,100 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <title>Therapeutic Shop</title>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
+<html>
+
+<head>
+  <title>Search Results</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Roboto+Condensed&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-      <link rel="stylesheet" href="./assets/css/reset.css">
-      <link rel="stylesheet" href="./assets/css/style.css">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
 
-    <body>
-      <header>
-        <nav>
-          <div class="nav-wrapper">
-            <a href="#!" class="brand-logo">Retail Therapy.</a>
-            <ul class="right hide-on-med-and-down">
-              <li><a href="#search-card"><i class="material-icons left">search</i>Begin your search</a></li>
-              <li><a href="#filter-search-card"><i class="material-icons left">view_module</i>Perform Advanced Search</a></li>
-              <li><a href="#appendersContact"><i class="material-icons left">view_module</i>Contact Us</a></li>
-            </ul>
-          </div>
-        </nav>
-        </nav>
-      </header>
-
-      <main class ="container">
-        <div class="row">
-  
-          <sidebar id="sidebar" class="col s12 m3">
-            <p>This is where out music player integration goes</p>
-  
-          <sidebar class="col s12 m3">
-            <button id="motivator">Motivate Me !</button>
-            <p id="mototext">x</p>
-  
-            <div class="row">
-              <form id="form" class="col s12">
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input placeholder="iPhone" id="product" type="text" class="validate">
-                    <label for="product">Search by Product</label>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input-field col s12 white-text">
-                    <select>
-                      <option id="category" value="" selected>All</option>
-                      <option value="1">Electronics</option>
-                      <option value="2">Outdoors</option>
-                      <option value="3">Food & Grocery</option>
-                      <option value="4">Sports</option>
-                      <option value="5">Beauty & Health</option>
-                    </select>
-                    <label>Search by Category</label>
-                  </div>
-                </div>  
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input disabled value="US" id="country" type="text" class="validate">
-                    <label for="country">Search by Country</label>
-                  </div>
-                </div>
-                <div class="card-action center-align" id="filer-search-card">
-                  <button class="btn waves-effect waves-light" id="advanced-search" type="submit" name="action">Search
-                    <i class="material-icons right">search</i>
-                  </button>
-                </div>
-              </form>
-                   
-            </div>
-          </sidebar>
-        <content>
-          <div id="results-display" class="col s12 m9">
-          </div>
-          <div class="center-on-small-only"></div>
-        </content>
+<body>
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Retail Therapy.</a>
+        <ul class="right hide-on-med-and-down">
+          <li class="navbarList"><a href="#search-card"><i class="material-icons left">search</i>Begin your search</a></li>
+          <li class="navbarList"><a href="#filter-search-card"><i class="material-icons left">view_module</i>Perform Advanced Search</a>
+          </li>
+          <li class="navbarList"><a href="#appendersContact"><i class="material-icons left">view_module</i>Contact Us</a></li>
+        </ul>
       </div>
+    </nav>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="row">
 
 
-      <footer Id = "appendersContact" class="appendersContactClass">
-       
-        <a href= mailto:the.appenders@gmail.com">Contact Us</a>
-      
-      </footer>
-      </main>
 
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>  
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-      <script src="./assets/javascript/script.js"></script>
-    </body>
-
-    
-  </html>
+      <sidebar class="col s12 m3">
         
 
+        <div class="row">
+          <form id="form" class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <input placeholder="iPhone" id="product" type="text" class="validate">
+                <label for="product">Search by Product</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 white-text">
+                <select>
+                  <option id="category" value="" selected>All</option>
+                  <option value="1">Electronics</option>
+                  <option value="2">Outdoors</option>
+                  <option value="3">Food & Grocery</option>
+                  <option value="4">Sports</option>
+                  <option value="5">Beauty & Health</option>
+                </select>
+                <label id="sbc">Search by Category</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input disabled value="US" id="country" type="text" class="validate">
+                <label id="sbCountry" for="country">Search by Country</label>
+              </div>
+            </div>
+            <div class="card-action center-align" id="filer-search-card">
+              <button class="btn waves-effect waves-light" id="advanced-search" type="submit" name="action">Search
+                <i class="material-icons right">search</i>
+              </button>
+            </div>
+          </form>
 
+        </div>
+        <button id="motivator">Motivate Me!</button>
+        <p id="mototext">x</p>
+      </sidebar>
+      <content>
+        <div id="results-display" class="col s12 m9">
+        </div>
+        <div class="center-on-small-only"></div>
+      </content>
+    </div>
+
+
+    <footer Id="appendersContact" class="appendersContactClass">
+
+      <a href=mailto:the.appenders@gmail.com">Contact Us</a>
+
+    </footer>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./assets/javascript/script.js"></script>
+</body>
+
+
+</html>

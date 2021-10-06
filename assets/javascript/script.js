@@ -15,24 +15,24 @@ var resultBlockArray = []
 
 
 function createContainers() {
-    var resultsGrid = document.createElement('div');
-      // Create a holding grid 
-      var rowGrid = document.createElement('div');
-      console.log(rowGrid)
-      // Set up a div to display in row
-      rowGrid.classList.add('row');
-      console.log(rowGrid)
+  var resultsGrid = document.createElement('div');
+  // Create a holding grid 
+  var rowGrid = document.createElement('div');
+  console.log(rowGrid)
+  // Set up a div to display in row
+  rowGrid.classList.add('row');
+  console.log(rowGrid)
 
-    for (var i = 0; i < resultQuantity; i++) {
+  for (var i = 0; i < resultQuantity; i++) {
     // Set up three columns with class s12 and m3 and unique ID
     var resultBlock = document.createElement('div');
     console.log(resultBlock);
     // resultBlock.classList.add('col', 's12', 'm4',);
-    resultBlock.className ='card large';
+    resultBlock.className = 'card large';
     resultBlock.classList.add('col', 's12', 'm4', 'card-background');
     // console.log(resultBlock);
     // resultBlock.textContent = "Hello I'm Block" + i
-    resultBlock.id= "block" + i;
+    resultBlock.id = "block" + i;
     // console.log(resultBlock);
     // Push each finished block into an array
     resultBlockArray.push(resultBlock);
@@ -43,45 +43,45 @@ function createContainers() {
     // Append rows to the grid
     resultsGrid.append(rowGrid);
     // console.log(resultsGrid);
-    }
-    resultsLayout.append(resultsGrid);
-    // Call function to fill each result
-    getResultsInfo();
-    // Append grid to the page
-    ;
+  }
+  resultsLayout.append(resultsGrid);
+  // Call function to fill each result
+  getResultsInfo();
+  // Append grid to the page
+  ;
 }
 
-function getResultsInfo(){
-    // pass productSearch value into the api
-    var productSearch = "tv";
-    var categorySearch = "aps";
+function getResultsInfo() {
+  // pass productSearch value into the api
+  var productSearch = "tv";
+  var categorySearch = "aps";
 
-    var apiURL = 'https://amazon-product-reviews-keywords.p.rapidapi.com/product/search?keyword=' + productSearch + '&country=US&category=' + categorySearch;    
-    console.log(apiURL)
+  var apiURL = 'https://amazon-product-reviews-keywords.p.rapidapi.com/product/search?keyword=' + productSearch + '&country=US&category=' + categorySearch;
+  console.log(apiURL)
 
-    const settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": apiURL,
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-host": "amazon-product-reviews-keywords.p.rapidapi.com",
-            "x-rapidapi-key": "0043ca6f4dmshdf70dfcdb9f6d49p1d4043jsn7d470c8cf85a"
-        }
-    };
-    
-    $.ajax(settings).done(function (response) {
-        console.log(response);
-    }).then(function(data){
-        console.log(data.products);
-        // call functions to use the data
-        createCards(data.products);
-    });
+  const settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": apiURL,
+    "method": "GET",
+    "headers": {
+      "x-rapidapi-host": "amazon-product-reviews-keywords.p.rapidapi.com",
+      "x-rapidapi-key": "0043ca6f4dmshdf70dfcdb9f6d49p1d4043jsn7d470c8cf85a"
+    }
+  };
+
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+  }).then(function (data) {
+    console.log(data.products);
+    // call functions to use the data
+    createCards(data.products);
+  });
 }
 
 function createCards(searchProducts) {
-    console.log(searchProducts);
-    for (var i = 0; i < resultQuantity; i++) {
+  console.log(searchProducts);
+  for (var i = 0; i < resultQuantity; i++) {
     // create template literal to attach result to correct block
     var result = document.getElementById(`block` + [i]);
     // create card div
@@ -96,7 +96,7 @@ function createCards(searchProducts) {
     // productImage.setAttribute('style', 'width: 20vw')
     imageDiv.append(productImage);
     console.log(productImage);
-    
+
     // create card content Div
     var cardContentDiv = document.createElement('div');
     cardContentDiv.classList.add('card-content');
@@ -108,7 +108,7 @@ function createCards(searchProducts) {
     var trimmedString = string.substring(0, length);
     productTitle.textContent = trimmedString;
     cardContentDiv.append(productTitle);
-    productTitle.setAttribute('style', 'font-size:18px, font-weight: bold, font-style: inherit')
+    productTitle.setAttribute('style', 'font-size: 18px, font-weight: bold, font-style: inherit')
     console.log(productTitle);
     // create current Price and append to content
     var currentPrice = document.createElement('p')
@@ -147,52 +147,52 @@ function createCards(searchProducts) {
     result.append(cardContentDiv)
     // append card to results
     // result.append(cardDiv);
-    }
+  }
 }
 
 
 
 // ========================API  #2 motivational quotes
 
-var newQuote= ""
+var newQuote = ""
 
 
-function motoTextGeneration (){
-const settings = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://motivational-quotes1.p.rapidapi.com/motivation",
-	"method": "POST",
-	"headers": {
-		"content-type": "application/json",
-		"x-rapidapi-host": "motivational-quotes1.p.rapidapi.com",
-		"x-rapidapi-key": "0043ca6f4dmshdf70dfcdb9f6d49p1d4043jsn7d470c8cf85a"
-	},
-	"processData": false,
-	"data": {
-		"key1": "value",
-		"key2": "value"
-	}
-};
+function motoTextGeneration() {
+  const settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://motivational-quotes1.p.rapidapi.com/motivation",
+    "method": "POST",
+    "headers": {
+      "content-type": "application/json",
+      "x-rapidapi-host": "motivational-quotes1.p.rapidapi.com",
+      "x-rapidapi-key": "0043ca6f4dmshdf70dfcdb9f6d49p1d4043jsn7d470c8cf85a"
+    },
+    "processData": false,
+    "data": {
+      "key1": "value",
+      "key2": "value"
+    }
+  };
 
-$.ajax(settings).done(function (response) {
-	// console.log(response);
-  //clears quote box and add response
-  newQuote= ""
-  newQuote= response
-  // console.log (newQuote);
+  $.ajax(settings).done(function (response) {
+    // console.log(response);
+    //clears quote box and add response
+    newQuote = ""
+    newQuote = response
+    // console.log (newQuote);
 
-}); 
+  });
 }
 motoTextGeneration()
 
 
-var motivatorBtn= document.getElementById("motivator").addEventListener ("click", function(){
-  
+var motivatorBtn = document.getElementById("motivator").addEventListener("click", function () {
+
   //fun the function to generate the newquote 
   motoTextGeneration()
-  var motoWords=document.getElementById ("mototext")
-  motoWords.textContent= newQuote 
+  var motoWords = document.getElementById("mototext")
+  motoWords.textContent = newQuote
 
 })
 
@@ -200,11 +200,11 @@ var motivatorBtn= document.getElementById("motivator").addEventListener ("click"
 
 
 // Initialization of Materialize input field in Sidebar Search
-  $(document).ready(function(){
-    $('select').formSelect();
-  });
+$(document).ready(function () {
+  $('select').formSelect();
+});
 
-  M.AutoInit();
-        
+M.AutoInit();
+
 //  Functions with click events at the bottom
 createContainers()

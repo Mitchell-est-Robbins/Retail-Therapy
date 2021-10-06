@@ -9,35 +9,39 @@
 
 
 
-.nav-wrapper{
+.nav-wrapper {
 
-    background-color: var(--darkestBlue);
+    background-color: var(--lightestBrown);
     position: fixed;
 }
+
+.navbarList {
+    font-family: 'Roboto Condensed', sans-serif;
+    border: 2px solid #47250f;
+}
+
 .brand-logo {
     font-family: 'Fugaz One', cursive;
-
-    background-color: #012E40;
-
 }
 
 
 
-body{
+body {
 
-   background: url('https://images.unsplash.com/photo-1525176856018-d7fce7007c89?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80') no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
+    background: var(--darkestBlue) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-    .card-background {
-        background-color: var(--lightestBrown);
-        color: #1f0d02;
-        border: var(--darkest-brown) solid 2px;
-        border-radius: 5px 5px ;
-    
+.card-background {
+    background-color: var(--darkest-brown);
+    opacity: 0.85;
+    color: white;
+    border: var(--lightestBrown) solid 3px;
+    border-radius: 5px 5px;
+
 }
 
 #results-display {
@@ -45,28 +49,68 @@ body{
     align-items: center;
     display: inline-flex;
     align-items: flex-end;
-    margin-left: 9em;
-    margin-top: -25em;
+    margin-left: 15em;
+    margin-top: -31em;
 }
 
 #form {
+    margin-top: 5rem;
+    padding-top: 3px;
     background-color: var(--lighterBlue);
-    color: aliceblue;
+    color: white;
     border-radius: 5px 5px;
-    border: var(--darkest-brown) solid 2px;
-    width: 17em;
+    border: #47250f solid 2px;
+    width: 20em;
+    height: 24em;
     margin-left: -15em;
-    
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1em;
 }
+
+#sbc {
+    color: white;
+}
+
+#sbCountry {
+    color: rgba(255, 255, 255, 0.637);
+}
+
 
 #sidebar {
     color: white;
-    margin-left:5em ;
+    margin-left: 5em;
 
     background-color: #248EA6;
 
 }
 
+.card-image{
+    margin-top: 30px;
+    border: solid 3px #47250f ;
+}
+
+#motivator {
+    margin-left: -15.5em;
+    height: 3em;
+    width: 20rem;
+    border: #47250f solid 2px;
+    background-color: var(--lightestBrown);
+    color: #f7cdb2;
+    font-family: 'Fugaz One', cursive;
+}
+
+#mototext {
+    margin-left: -15.5em ;
+    background-color: var(--lighterBlue);
+    width: 20em;
+    margin-top: 5px;
+    color: #f7cdb2 ;
+    font-size: 1em;
+    padding: 5px;
+    border: #47250f solid 2px;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+}
 
 
 
@@ -74,41 +118,45 @@ body{
 #appendersContact {
     text-align: right;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding: 25px ;
+    padding: 25px;
     border-radius: 25px;
 
-    margin:0px auto;
+    margin: 0px auto;
     width: 10%;
-    height:40px;
-    background-color:#0f283c;
-    float:right;
-    padding:10px;
-    border:2px solid #314E59;
+    height: 40px;
+    background-color: #0f283c;
+    float: right;
+    padding: 10px;
+    border: 2px solid #314E59;
 
-    
-  }
+
+}
+
 /* Fox- adding hover effets to links */
-  /* this is hover glow on contact button */
+/* this is hover glow on contact button */
 
-  .appendersContactClass:hover{
-       /* shadow glow*/
+.appendersContactClass:hover {
+    /* shadow glow*/
     box-shadow:
-    0 0 60px 30px #e1dcd8,  /* inner white */
-    0 0 100px 60px #7cceee, /* middle magenta */
-    0 0 140px 90px #0d6c8f; /* outer cyan */
+        0 0 60px 30px #e1dcd8,
+        /* inner white */
+        0 0 100px 60px #7cceee,
+        /* middle magenta */
+        0 0 140px 90px #0d6c8f;
+    /* outer cyan */
     transition-duration: .5s;
-  
 
-  }
+
+}
+
 /* glow on search button */
-  #advanced-search:hover{
+#advanced-search:hover {
     box-shadow:
-    0 0 10px 5px #e1dcd8,  /* inner white */
-    0 0 30px 10px #7cceee, /* middle magenta */
-    0 0 60px 10px #0d6c8f; /* outer cyan */
+        0 0 10px 5px #e1dcd8,
+        /* inner white */
+        0 0 30px 10px #7cceee,
+        /* middle magenta */
+        0 0 60px 10px #0d6c8f;
+    /* outer cyan */
     transition-duration: .5s;
-  }
-
-
-
- 
+}
