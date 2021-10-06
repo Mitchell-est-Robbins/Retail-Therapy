@@ -158,7 +158,6 @@ function createCards(searchProducts) {
 
 // ========================API  #2 motivational quotes
 
-var newQuote = ""
 
 function motoTextGeneration() {
   const settings = {
@@ -177,7 +176,9 @@ function motoTextGeneration() {
       "key2": "value"
     }
   };
-
+  
+  var newQuote = ""
+  
   $.ajax(settings).done(function (response) {
     // console.log(response);
     //clears quote box and add response
@@ -200,10 +201,10 @@ M.AutoInit();
 advancedSearchBtn.addEventListener('click', createContainers)
 
 var motivatorBtn = document.getElementById("motivator").addEventListener("click", function () {
-  //fun the function to generate the newquote 
-  motoTextGeneration()
   var motoWords = document.getElementById("mototext")
   motoWords.textContent = newQuote
+  //fun the function to generate the newquote 
+  motoTextGeneration()
 
 })
 
