@@ -11,8 +11,10 @@ console.log(categorySearch.value);
 var resultQuantity = 12
 var resultsIndex = 0
 var resultBlockArray = []
-
-
+var promise = localStorage.getItem('search')
+var firstSearch = JSON.parse(promise)
+console.log(promise);
+console.log(firstSearch);
 function createContainers(event) {
     event.preventDefault()
   resultsLayout.innerHTML=""
@@ -158,7 +160,6 @@ function createCards(searchProducts) {
 
 // ========================API  #2 motivational quotes
 
-var newQuote = ""
 
 function motoTextGeneration() {
   const settings = {
@@ -177,6 +178,8 @@ function motoTextGeneration() {
       "key2": "value"
     }
   };
+  
+  var newQuote = ""
 
   $.ajax(settings).done(function (response) {
     // console.log(response);
@@ -200,10 +203,10 @@ M.AutoInit();
 advancedSearchBtn.addEventListener('click', createContainers)
 
 var motivatorBtn = document.getElementById("motivator").addEventListener("click", function () {
-  //fun the function to generate the newquote 
-  motoTextGeneration()
   var motoWords = document.getElementById("mototext")
   motoWords.textContent = newQuote
+  //fun the function to generate the newquote 
+  motoTextGeneration()
 
 })
 
