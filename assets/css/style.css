@@ -19,6 +19,7 @@
 
 .brand-logo {
     font-family: 'Fugaz One', cursive;
+    margin-left: 10px;
 }
 
 
@@ -34,7 +35,7 @@ body {
 
 .card-background {
     background-color: var(--darkest-brown);
-    opacity: 0.85;
+    opacity: 0.850;
     color: white;
     border: var(--lightestBrown) solid 3px;
     border-radius: 5px 5px;
@@ -88,7 +89,7 @@ body {
     width: 20rem;
     border: #47250f solid 2px;
     background-color: var(--lightestBrown);
-    color: #f7cdb2;
+    color: #f8ece4;
     font-family: 'Fugaz One', cursive;
 }
 
@@ -120,6 +121,19 @@ body {
     border: 2px solid #314E59;
 }
 
+.unique-link {
+    font-size: 14px;
+    font-style: inherit;
+    color: white;
+    text-decoration: underline;
+}
+
+.card {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+
 /* Fox- adding hover effets to links */
 /* this is hover glow on contact button */
 
@@ -147,14 +161,14 @@ body {
     transition-duration: .5s;
 }
 
-.unique-link {
-    font-size: 14px;
-    font-style: inherit;
-    color: white;
-    text-decoration: underline;
+#motivator:hover {
+    box-shadow:
+        0 0 10px 5px #e1dcd8,
+        /* inner white */
+        0 0 5px 2px #7cceee,
+        /* middle magenta */
+        0 0 10px 10px #0d6c8f;
+    /* outer cyan */
+    transition-duration: .5s;
 }
 
-.card {
-    margin-bottom: 10px;
-    margin-right: 10px;
-}

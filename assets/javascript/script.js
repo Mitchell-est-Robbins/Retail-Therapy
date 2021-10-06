@@ -12,9 +12,11 @@ var resultQuantity = 12
 var resultsIndex = 0
 var resultBlockArray = []
 
+
 function createContainers(event) {
     event.preventDefault()
   resultsLayout.innerHTML=""
+
   var resultsGrid = document.createElement('div');
   // Create a holding grid 
   var rowGrid = document.createElement('div');
@@ -30,6 +32,7 @@ function createContainers(event) {
     // resultBlock.classList.add('col', 's12', 'm4',);
     resultBlock.className = 'card large';
     resultBlock.classList.add('col', 's12', 'm4', 'l3', 'card-background');
+
     // console.log(resultBlock);
     // resultBlock.textContent = "Hello I'm Block" + i
     resultBlock.id = "block" + i;
@@ -58,6 +61,7 @@ function getResultsInfo() {
   var ProductSearchTerm = productSearch.value
   var CategorySearchTerm = categorySearch.value   
   var apiURL = 'https://amazon-product-reviews-keywords.p.rapidapi.com/product/search?keyword=' + ProductSearchTerm + '&country=US&category=' + CategorySearchTerm;
+
   console.log(apiURL)
   const settings = {
     "async": true,
@@ -200,4 +204,6 @@ var motivatorBtn = document.getElementById("motivator").addEventListener("click"
   motoTextGeneration()
   var motoWords = document.getElementById("mototext")
   motoWords.textContent = newQuote
+
 })
+
