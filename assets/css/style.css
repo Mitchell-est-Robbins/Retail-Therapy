@@ -121,6 +121,19 @@ body {
     border: 2px solid #314E59;
 }
 
+.unique-link {
+    font-size: 14px;
+    font-style: inherit;
+    color: white;
+    text-decoration: underline;
+}
+
+.card {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+
 /* Fox- adding hover effets to links */
 /* this is hover glow on contact button */
 
@@ -158,3 +171,4 @@ body {
     /* outer cyan */
     transition-duration: .5s;
 }
+
