@@ -19,6 +19,7 @@
 
 .brand-logo {
     font-family: 'Fugaz One', cursive;
+    margin-left: 10px;
 }
 
 
@@ -34,7 +35,7 @@ body {
 
 .card-background {
     background-color: var(--darkest-brown);
-    opacity: 0.85;
+    opacity: 0.850;
     color: white;
     border: var(--lightestBrown) solid 3px;
     border-radius: 5px 5px;
@@ -88,7 +89,7 @@ body {
     width: 20rem;
     border: #47250f solid 2px;
     background-color: var(--lightestBrown);
-    color: #f7cdb2;
+    color: #f8ece4;
     font-family: 'Fugaz One', cursive;
 }
 
