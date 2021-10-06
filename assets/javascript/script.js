@@ -1,7 +1,7 @@
-var productSearch = document.getElementById('product');
-var categorySearch = document.getElementById('category');
+var productSearch = document.querySelector('#product');
+var categorySearch = document.querySelector('#category');
 var resultsLayout = document.getElementById('results-display')
-var advancedSearchBtn = document.getElementById('advanced-search');
+var advancedSearchBtn = document.querySelector('#advanced-search');
 var paragraphs = document.getElementsByTagName('p')
 console.log(productSearch);
 // productSearch.value = productSearch.textContent
@@ -12,7 +12,10 @@ var resultQuantity = 12
 var resultsIndex = 0
 var resultBlockArray = []
 
-function createContainers() {
+
+function createContainers(event) {
+    event.preventDefault()
+
   var resultsGrid = document.createElement('div');
   // Create a holding grid 
   var rowGrid = document.createElement('div');
@@ -27,7 +30,7 @@ function createContainers() {
     console.log(resultBlock);
     // resultBlock.classList.add('col', 's12', 'm4',);
     resultBlock.className = 'card large';
-    resultBlock.classList.add('col', 's12', 'm4', 'card-background');
+    resultBlock.classList.add('col', 's12', 'm6', 'l4', 'card-background');
     // console.log(resultBlock);
     // resultBlock.textContent = "Hello I'm Block" + i
     resultBlock.id = "block" + i;
@@ -51,9 +54,13 @@ function createContainers() {
 
 function getResultsInfo() {
   // pass productSearch value into the api
-  var productSearch = "tv";
-  var categorySearch = "aps";
-  var apiURL = 'https://amazon-product-reviews-keywords.p.rapidapi.com/product/search?keyword=' + productSearch + '&country=US&category=' + categorySearch;
+
+//   var productSearch = ProductSearchTerm;
+//   var categorySearch = CategorySearchTerm;
+  var ProductSearchTerm = productSearch.value
+  var CategorySearchTerm = categorySearch.value   
+  var apiURL = 'https://amazon-product-reviews-keywords.p.rapidapi.com/product/search?keyword=' + ProductSearchTerm + '&country=US&category=' + CategorySearchTerm;
+
   console.log(apiURL)
   const settings = {
     "async": true,
@@ -196,4 +203,6 @@ var motivatorBtn = document.getElementById("motivator").addEventListener("click"
   motoTextGeneration()
   var motoWords = document.getElementById("mototext")
   motoWords.textContent = newQuote
+
 })
+
