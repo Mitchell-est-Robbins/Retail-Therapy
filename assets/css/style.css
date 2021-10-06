@@ -7,10 +7,7 @@
     --darkest-brown: #8C5B3E;
 }
 
-
-
 .nav-wrapper {
-
     background-color: var(--lightestBrown);
     position: fixed;
 }
@@ -28,7 +25,6 @@
 
 
 body {
-
     background: var(--darkestBlue) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -36,13 +32,13 @@ body {
     background-size: cover;
 }
 
+
 .card-background {
     background-color: var(--darkest-brown);
     opacity: 0.850;
     color: white;
     border: var(--lightestBrown) solid 3px;
     border-radius: 5px 5px;
-
 }
 
 #results-display {
@@ -76,13 +72,10 @@ body {
     color: rgba(255, 255, 255, 0.637);
 }
 
-
 #sidebar {
     color: white;
     margin-left: 5em;
-
-    background-color: #248EA6;
-
+    background-color: #248EA6;  
 }
 
 .card-image{
@@ -113,15 +106,12 @@ body {
     text-align: center;
 }
 
-
-
 /* spacing and padding with rounded edges on the left */
 #appendersContact {
     text-align: right;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 25px;
     border-radius: 25px;
-
     margin: 0px auto;
     width: 10%;
     height: 40px;
@@ -129,8 +119,6 @@ body {
     float: right;
     padding: 10px;
     border: 2px solid #314E59;
-
-
 }
 
 /* Fox- adding hover effets to links */
@@ -146,8 +134,6 @@ body {
         0 0 140px 90px #0d6c8f;
     /* outer cyan */
     transition-duration: .5s;
-
-
 }
 
 /* glow on search button */

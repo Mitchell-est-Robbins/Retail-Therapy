@@ -31,30 +31,25 @@
 
   <main class="container">
     <div class="row">
-
-
-
       <sidebar class="col s12 m3">
-        
-
         <div class="row">
           <form id="form" class="col s12">
-            <div class="row">
-              <div class="input-field col s12">
-                <input placeholder="iPhone" id="product" type="text" class="validate">
-                <label for="product">Search by Product</label>
-              </div>
-            </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input placeholder="iPhone" id="product" type="text" class="validate">
+                    <label for="product">Search by Product</label>
+                  </div>
+                </div>
             <div class="row">
               <div class="input-field col s12 white-text">
-                <select>
-                  <option id="category" value="" selected>All</option>
-                  <option value="1">Electronics</option>
-                  <option value="2">Outdoors</option>
-                  <option value="3">Food & Grocery</option>
-                  <option value="4">Sports</option>
-                  <option value="5">Beauty & Health</option>
-                </select>
+                <select id="category" class="white-text">
+                      <option value='aps'>All</option>
+                      <option value="Electronics">Electronics</option>
+                      <option value="Outdoors">Outdoors</option>
+                      <option value="Food & Grocery">Food & Grocery</option>
+                      <option value="Sports">Sports</option>
+                      <option value="Beauty & Health">Beauty & Health</option>
+                    </select>
                 <label id="sbc">Search by Category</label>
               </div>
             </div>
@@ -65,7 +60,7 @@
               </div>
             </div>
             <div class="card-action center-align" id="filer-search-card">
-              <button class="btn waves-effect waves-light" id="advanced-search" type="submit" name="action">Search
+              <button class="btn waves-effect waves-light" id="advanced-search">Search
                 <i class="material-icons right">search</i>
               </button>
             </div>
@@ -81,7 +76,6 @@
         <div class="center-on-small-only"></div>
       </content>
     </div>
-
 
     <footer Id="appendersContact" class="appendersContactClass">
 

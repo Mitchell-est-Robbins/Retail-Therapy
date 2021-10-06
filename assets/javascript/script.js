@@ -12,8 +12,10 @@ var resultQuantity = 12
 var resultsIndex = 0
 var resultBlockArray = []
 
+
 function createContainers(event) {
     event.preventDefault()
+
   var resultsGrid = document.createElement('div');
   // Create a holding grid 
   var rowGrid = document.createElement('div');
@@ -52,11 +54,13 @@ function createContainers(event) {
 
 function getResultsInfo() {
   // pass productSearch value into the api
+
 //   var productSearch = ProductSearchTerm;
 //   var categorySearch = CategorySearchTerm;
   var ProductSearchTerm = productSearch.value
   var CategorySearchTerm = categorySearch.value   
   var apiURL = 'https://amazon-product-reviews-keywords.p.rapidapi.com/product/search?keyword=' + ProductSearchTerm + '&country=US&category=' + CategorySearchTerm;
+
   console.log(apiURL)
   const settings = {
     "async": true,
@@ -199,4 +203,6 @@ var motivatorBtn = document.getElementById("motivator").addEventListener("click"
   motoTextGeneration()
   var motoWords = document.getElementById("mototext")
   motoWords.textContent = newQuote
+
 })
+
