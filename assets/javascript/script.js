@@ -1,3 +1,4 @@
+// Declare all variables at top of page
 var productSearch = document.querySelector('#product');
 var categorySearch = document.querySelector('#category');
 var resultsLayout = document.getElementById('results-display')
@@ -5,32 +6,38 @@ var advancedSearchBtn = document.querySelector('#advanced-search');
 var newQuote = "";
 var motivatorBtn = document.getElementById("motivator")
 var motoWords = document.getElementById("mototext")
-console.log(productSearch);
-// productSearch.value = productSearch.textContent
-console.log(productSearch.value);
-console.log(categorySearch);
-console.log(categorySearch.value);
+// console.log(productSearch);
+// // productSearch.value = productSearch.textContent
+// console.log(productSearch.value);
+// console.log(categorySearch);
+// console.log(categorySearch.value);
+
+// Declares amount of results displayed
 var resultQuantity = 12
 var resultsIndex = 0
 var resultBlockArray = []
+
+// Function to create card elements on page
 function createContainers(event) {
   if (event) {
     event.preventDefault()
   }
+  // Clears everything besides sidebar and navigation bar
   resultsLayout.innerHTML=""
   
-  var resultsGrid = document.createElement('div');
   // Create a holding grid 
-  var rowGrid = document.createElement('div');
-  console.log(rowGrid)
+  var resultsGrid = document.createElement('div');
   // Set up a div to display in row
+  var rowGrid = document.createElement('div');
+  // console.log(rowGrid)
   rowGrid.classList.add('row');
-  console.log(rowGrid)
-  
+  // console.log(rowGrid)
+
+  // Creates card as dicated by result quantity
   for (var i = 0; i < resultQuantity; i++) {
-    // Set up three columns with class s12 and m3 and unique ID
+    // Set up three columns with responsive classes
     var resultBlock = document.createElement('div');
-    console.log(resultBlock);
+    // console.log(resultBlock);
     // resultBlock.classList.add('col', 's12', 'm4',);
     resultBlock.className = 'card large';
     resultBlock.classList.add('col', 's12', 'm4', 'l3', 'card-background');
@@ -41,22 +48,23 @@ function createContainers(event) {
     // console.log(resultBlock);
     // Push each finished block into an array
     resultBlockArray.push(resultBlock);
-    console.log(resultBlockArray);
+    // console.log(resultBlockArray);
     // Attach each result to the row
     rowGrid.append(resultBlock);
     // console.log(rowGrid);
     // Append rows to the grid
     resultsGrid.append(rowGrid);
     // console.log(resultsGrid);
-  }
+  };
+  // Append grid to the page
   resultsLayout.append(resultsGrid);
   // Call function to fill each result
   getResultsInfo();
-  // Append grid to the page
-  ;
+
 }
 
 function getResultsInfo() {
+  // Declares local storage variable if existing
   var promise = localStorage.getItem('search')
   var firstSearch = JSON.parse(promise)
   console.log(promise);
@@ -64,16 +72,21 @@ function getResultsInfo() {
   // pass productSearch value into the api
   //   var productSearch = ProductSearchTerm;
   //   var categorySearch = CategorySearchTerm;
+
+  // Check if local storage = true, get search terms from local storage
   if (localStorage.length !==0) {
     ProductSearchTerm = firstSearch;
     console.log(firstSearch);
     console.log(ProductSearchTerm)
     CategorySearchTerm = 'aps'
   } else {
+    // Else get search terms from user input
     var ProductSearchTerm = productSearch.value
     console.log(ProductSearchTerm)
     var CategorySearchTerm = categorySearch.value
   }
+
+  // Responsive api
   var apiURL = 'https://amazon-product-reviews-keywords.p.rapidapi.com/product/search?keyword=' + ProductSearchTerm + '&country=US&category=' + CategorySearchTerm;
   
   console.log(apiURL)
@@ -98,6 +111,7 @@ function getResultsInfo() {
 
 }
 
+// Function to create the correct cards given the api response
 function createCards(searchProducts) {
   console.log(searchProducts);
   for (var i = 0; i < resultQuantity; i++) {
@@ -115,7 +129,7 @@ function createCards(searchProducts) {
     // productImage.setAttribute('style', 'max-height:300px')
     // productImage.setAttribute('style', 'width: 20vw')
     imageDiv.append(productImage);
-    console.log(productImage);
+    // console.log(productImage);
     // create card content Div
     var cardContentDiv = document.createElement('div');
     cardContentDiv.classList.add('card-content');
@@ -128,21 +142,21 @@ function createCards(searchProducts) {
     cardContentDiv.append(productTitle);
     productTitle.setAttribute('style', 'font-size: 14px, font-style: inherit')
     productTitle.classList.add('center-align', 'title-of-card');
-    console.log(productTitle);
+    // console.log(productTitle);
     // create review stars track and append to card content
     var reviewStars = document.createElement('p')
     reviewStars.textContent = "Amazon Product Rating: " + searchProducts[i].reviews.rating
     reviewStars.setAttribute('style', 'font-size: 14px, font-style: inherit')
     reviewStars.classList.add('description')
     cardContentDiv.append(reviewStars)
-    console.log(reviewStars)
+    // console.log(reviewStars)
     // create current Price and append to content
     var currentPrice = document.createElement('p')
     currentPrice.textContent = "Sale Price: $" + searchProducts[i].price.current_price
     currentPrice.setAttribute('style', 'font-size: 14px, font-style: inherit')
     currentPrice.classList.add('description')
     cardContentDiv.append(currentPrice);
-    console.log(currentPrice)
+    // console.log(currentPrice)
     // Create view on Amazon hyperlink
     var productLink = document.createElement('a')
     var uniqueLink = searchProducts[i].url
@@ -157,7 +171,7 @@ function createCards(searchProducts) {
     reviewCount.textContent = "Total Reviews: " + searchProducts[i].reviews.total_reviews
     reviewCount.setAttribute('style', 'font-size: 14px, font-style: inherit')
     cardContentDiv.append(reviewCount)
-    console.log(reviewCount)
+    // console.log(reviewCount)
     reviewCount.classList.add('description')
     // Style paragraphs and card title
     // paragraphs.setAttribute('style', 'font-size: 14px, font-style: inherit')
@@ -165,16 +179,14 @@ function createCards(searchProducts) {
     result.append(imageDiv)
     // append card content to card
     result.append(cardContentDiv)
-    // append card to results
-    // result.append(cardDiv);
   }
+  // Clears local storage so it is responsive to user input on next search
   localStorage.clear();
   console.log(localStorage)
 }
 
 // ========================API  #2 motivational quotes
 
-var newQuote = ""
 
 function motoTextGeneration() {
   const settings = {
@@ -222,9 +234,10 @@ motivatorBtn.addEventListener('click',motoTextGeneration)
 //   motoTextGeneration()
 // })
 
+// Runs after window initialization if there is local storage
 function init() {
   if(localStorage.length !==0){
   createContainers();
-
 }}
+// Calls for function on initialization which will only run on redirect
 init()
