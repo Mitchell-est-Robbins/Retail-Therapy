@@ -89,7 +89,7 @@ body {
     height: 3em;
     width: 20rem;
     border: #47250f solid 2px;
-    background-color: var(--lightestBrown);
+    background-color: #2bbbad;
     color: #f8ece4;
     font-family: 'Fugaz One', cursive;
 }
@@ -168,7 +168,7 @@ body {
         /* inner white */
         0 0 5px 2px #7cceee,
         /* middle magenta */
-        0 0 10px 10px #0d6c8f;
+        0 0 10px 10px #6bbfdd;
     /* outer cyan */
     transition-duration: .5s;
 }
