@@ -237,6 +237,7 @@ motivatorBtn.addEventListener('click',motoTextGeneration)
 // Runs after window initialization if there is local storage
 function init() {
   if(localStorage.length !==0){
+  $('#product').attr('placeholder', JSON.parse(localStorage.getItem('search')))
   createContainers();
 }}
 // Calls for function on initialization which will only run on redirect
