@@ -42,7 +42,6 @@
     #content {
       padding: .01% 23%;
       display: inline-flex;
-
     }
 
     #searchBtn {
@@ -56,7 +55,9 @@
     }
 
     #footer {
-      color: #f8bc87;
+      border: 1px #f8bc87 solid;
+      font-family: 'Roboto Condensed', sans-serif;
+      color: white;
       text-align: center;
       bottom: 2px;
       height: 40px;
@@ -65,7 +66,35 @@
       vertical-align: middle;
       position: fixed;
       width: 100%;
+      font-size: 20px;
+      background-color: #314E59;
+    }
 
+    #email {
+      text-decoration: underline;
+      color: white;
+      float: right;
+      padding-right: 7px;
+    }
+
+    #iconE {
+      margin-top: 4px;
+      float: right;
+      padding-right: 10px;
+      font-size: 25px;
+    }
+
+    #repoLink {
+      padding-left: 10px;
+      float: left;
+      text-decoration: underline;
+      color: white;
+    }
+
+    #iconD {
+      float: left;
+      font-size: px;
+      margin-top: 5px;
     }
 
     /* Fox adding glow to search */
@@ -80,9 +109,55 @@
       transition-duration: .5s;
     }
 
+
+    /* media queries*/
+
+    @media screen and (max-width: 600px) {
+      #shopWith {
+        font-size: 15px;
+      }
+
+      #retailTherapy {
+        font-size: 35px;
+      }
+
+      #content {
+        display: flex;
+      }
+
+      #footer {
+        font-size: 15px;
+        text-align: center;
+        background-color: #011C26;
+      }
+    }
+
+    #iconE,
+    #iconD {
+      font-size: 15px;
+    }
+    @media screen and (max-width: 768px){
+      #shopWith {
+        font-size: 17px;
+      }
+      #retailTherapy {
+        font-size: 40px;
+      }
+      #content{
+        display: flex;
+      }
+    }
+    @media screen and (min-width: 1000){
+      #content{
+        display: flex;
+      }
+    }
+     
+
     /* #email {
       text-decoration: none;
     } */
+
 
   </style>
   <title>
@@ -98,21 +173,33 @@
 </head>
 
 <body>
-  <div id="header">
-    <h1 id="retailTherapy">
-      <span id="shopWith">where healing $tarts</span>
-      <br>
-      Retail Therapy<span class="dot">.</span>
-    </h1>
-  </div>
-  <div class="container">
-    <div id="content">
-      <input type='text' id='search' placeholder="Search products from Amazon" style="width: 41em; border-radius: 2px 2px; background-color: white ;
-          border: solid 2px #314E59; height: 3em;">
-      <button id="searchBtn" type="button">
-        <i class="material-icons" style="color: white;">search</i>
-      </button>
+ 
+    <div id="header">
+      <h1 id="retailTherapy">
+        <span id="shopWith">where healing $tarts</span>
+        <br>
+        Retail Therapy<span class="dot">.</span>
+      </h1>
     </div>
+    <div class="container">
+      <div id="content">
+        <input type='text' id='search' placeholder="Search products from Amazon" style="width: 41em; border-radius: 2px 2px; background-color: white;
+          border: solid 2px #314E59; height: 3em;">
+        <button id="searchBtn" type="button">
+          <i class="material-icons" style="color: white;">search</i>
+        </button>
+      </div>
+    </div>
+
+  
+    <footer id="footer">
+      &copy; The Appenders Productions
+      <i id="iconE" class="material-icons" style="color: white;">contact_mail</i>
+      <a id="email" href="mailto:the.appenders@gmail.com">Contact Us</a>
+      <a id="repoLink" href="https://github.com/VookmirVookmir/Project1-TheAppenders">Github Repo</a>
+      <i id="iconD" class="material-icons" style="color: white;">description</i>
+    </footer>
+
   </div>
   <footer id="footer">
     &copy; The Appenders Productions
@@ -120,6 +207,7 @@
   </footer>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src='./assets/javascript/homepage-script.js'></script>
 </body>

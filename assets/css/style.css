@@ -35,9 +35,9 @@ body {
 
 
 .card-background {
-    background-color: var(--darkest-brown);
-    opacity: 0.850;
-    color: white;
+    background-color: rgb(238, 236, 231);
+    opacity: 0.8;
+    color: var(--darkest-brown);
     border: var(--lightestBrown) solid 3px;
     border-radius: 5px 5px;
 }
@@ -125,7 +125,7 @@ body {
 .unique-link {
     font-size: 14px;
     font-style: inherit;
-    color: white;
+    color: var(--lighterBlue);
     text-decoration: underline;
 }
 
