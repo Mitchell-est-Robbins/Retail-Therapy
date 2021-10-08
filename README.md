@@ -45,7 +45,7 @@ Google Fonts
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-    var apiURL = 'https://amazon-product-reviews-keywords.p.rapidapi.com/product/search?keyword=' + ProductSearchTerm + '&country=US&category=' + CategorySearchTerm;
+    Amazon Products/review/keyword
 | `api_key` | `string` |  
 
 #### Get item
@@ -56,7 +56,7 @@ Google Fonts
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | "url": "https://motivational-quotes1.p.rapidapi.com/motivation",
+| `id`      | `string` | Motivational Quotes
 
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
   
