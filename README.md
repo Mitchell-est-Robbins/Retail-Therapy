@@ -54,7 +54,7 @@ would like and a different quote will appear each time.
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | "url": "https://motivational-quotes1.p.rapidapi.com/motivation",
 
-
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
   
 ## Authors
 
