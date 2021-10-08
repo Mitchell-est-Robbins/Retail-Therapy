@@ -60,7 +60,7 @@ body {
     border: #47250f solid 2px;
     width: 20em;
     height: 24em;
-    margin-left: -15em;
+    margin-left: -6.5em;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1em;
 }
@@ -85,7 +85,7 @@ body {
 }
 
 #motivator {
-    margin-left: -15.5em;
+    margin-left: -6.5em;
     height: 3em;
     width: 20rem;
     border: #47250f solid 2px;
@@ -95,7 +95,7 @@ body {
 }
 
 #mototext {
-    margin-left: -15.5em ;
+    margin-left: -6.5em ;
     background-color: var(--lighterBlue);
     width: 20em;
     margin-top: 5px;
@@ -172,4 +172,27 @@ body {
     /* outer cyan */
     transition-duration: .5s;
 }
+
+/***media queries***/
+@media screen and (max-width: 1000px){
+    #form{
+        margin-left: 0;
+    }
+    #motivator {
+        margin-left: 0;
+    }
+    #mototext {
+        margin-left: 0;
+    }
+
+    #results-display{
+        margin-top: 5em;
+        margin-left: -5em;
+    }
+}
+
+
+
+    
+
 
