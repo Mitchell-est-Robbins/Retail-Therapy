@@ -14,7 +14,7 @@ presented with a small form, so you can continue shopping, and looking for other
 "Motivate Me!" button, you can click that button for great, mood-modifying, motivational quotes. You can click this button as many times as you 
 would like and a different quote will appear each time.
 
-![screenshot of landing page](./assets/screen-shot-2021)
+![screenshot of landing page](./assets/screen-shot-landing-page.png)
 ![screenshot of results page](./assets/screen-shot-resultspage.png)
 
 [Click here to see the deployed website.](https://vookmirvookmir.github.io/Project1-TheAppenders/)
@@ -34,34 +34,16 @@ Google Fonts
 -https://fonts.googleapis.com/css2?family=Fugaz+One&family=Roboto+Condensed&display=swap
   
 ## API Reference
+Amazon Products/review/keyword
+Motivational Quotes
 
 
-```http
-  GET /api/items
-```
-
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-    Amazon Products/review/keyword
-| `api_key` | `string` |  
-
-#### Get item
-
-```http
-  GET /api/items/${id}
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | Motivational Quotes
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
   
 ## Authors
 
 - [@Mitchell ](https://github.com/VookmirVookmir/Project1-TheAppenders)
 - [@Fox ](https://github.com/VookmirVookmir/Project1-TheAppenders)
-- [@Jayla](https://github.com/VookmirVookmir/Project1-TheAppenders)
+- [@Jayla](https://github.com/jayladenae)
 - [@Alex](https://github.com/VookmirVookmir/Project1-TheAppenders)
 - [@Carlos](https://github.com/VookmirVookmir/Project1-TheAppenders)
 ## Support
