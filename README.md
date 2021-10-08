@@ -22,7 +22,12 @@ would like and a different quote will appear each time.
 
 [Click here to see the deployed website.](https://vookmirvookmir.github.io/Project1-TheAppenders/)
 
+Version:
+**1.0**
 
+####Credits
+Materialize
+Google Fonts
 
 - TO create this app we used skills we aquired during the first 3 weeks of class 
 - Used HTML
