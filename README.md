@@ -1,6 +1,7 @@
 
 
-# Retail Therapy* is an app that that helps people who are feeling lost, down, or sad, and want to treat themselves to a relaxing 
+# Retail Therapy
+is an app that that helps people who are feeling lost, down, or sad, and want to treat themselves to a relaxing 
 shopping experience, that will help lift their mood. While shopping on our website you have access to *Amazon* products, and a
 Motivational Quote Generator. 
 
