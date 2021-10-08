@@ -17,7 +17,7 @@ presented with a small form, so you can continue shopping, and looking for other
 "Motivate Me!" button, you can click that button for great, mood-modifying, motivational quotes. You can click this button as many times as you 
 would like and a different quote will appear each time.
 
-![screenshot of landing page](./assets/screen-shot-landing-page.png)
+![screenshot of landing page](./assets/screen-shot-2021)
 ![screenshot of results page](./assets/screen-shot-resultspage.png)
 
 [Click here to see the deployed website.](https://vookmirvookmir.github.io/Project1-TheAppenders/)
@@ -29,7 +29,6 @@ Version:
 Materialize
 Google Fonts
 
-- TO create this app we used skills we aquired during the first 3 weeks of class 
 - Used HTML
 - CSS 
 - Javascript
